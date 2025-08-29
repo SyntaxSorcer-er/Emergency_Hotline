@@ -90,6 +90,8 @@ callButtons.forEach((btn) => {
     `;
 
     callHistoryBox.prepend(historyItem); // হিস্টোরির উপরে যোগ করো
+
+    alert("📞 Calling National Emergency number: " + callNumber);
   });
 });
 
