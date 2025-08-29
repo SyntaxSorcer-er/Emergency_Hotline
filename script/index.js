@@ -9,16 +9,13 @@ copyButtons.forEach((btn) => {
     const numberElement = card.querySelector("span[id^='number']");
     const copyNumber = numberElement.textContent;
 
-    // ক্লিপবোর্ডে কপি
     navigator.clipboard.writeText(copyNumber).then(() => {
       console.log(`Copied: ${copyNumber}`);
     });
 
-    // Copy কাউন্টার বাড়াও
     copyCount++;
     copyCounter.textContent = copyCount;
 
-    // Alert দেখাও
     alert("নম্বর কপি হয়েছে: " + copyNumber);
   });
 });
@@ -35,7 +32,7 @@ heartIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
     heartCount++;
     headerHeartCounter.textContent = heartCount;
-    icon.classList.toggle("text-red-500"); // ক্লিক করলে লাল হবে
+    icon.classList.toggle("text-red-500");
   });
 });
 
@@ -43,11 +40,11 @@ heartIcons.forEach((icon) => {
 const callButtons = document.querySelectorAll("button[id^='card-btn']");
 const coinCounter = document.querySelector(
   "header div:first-child ~ div div:nth-child(2) span"
-); // হেডারের কয়েন counter
-let coins = parseInt(coinCounter.textContent); // শুরুতে কয়েন
+);
+let coins = parseInt(coinCounter.textContent);
 
 const callHistoryBox = document.getElementById("card-container");
-const clearBtn = document.querySelector("aside button"); // Clear button
+const clearBtn = document.querySelector("aside button");
 
 callButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -56,11 +53,9 @@ callButtons.forEach((btn) => {
       return;
     }
 
-    // কয়েন কমাও
     coins -= 20;
     coinCounter.textContent = coins;
 
-    // কার্ড থেকে নাম্বার + টাইটেল বের করো
     const card = btn.closest(".bg-white");
     const numberElement = card.querySelector("span[id^='number']");
     const callNumber = numberElement.textContent;
@@ -68,7 +63,6 @@ callButtons.forEach((btn) => {
     const titleElement = card.querySelector("h3");
     const callTitle = titleElement ? titleElement.textContent : "Unknown";
 
-    // লোকাল টাইম (English format)
     const now = new Date();
     const time = now.toLocaleTimeString("en-US", {
       hour: "2-digit",
@@ -77,7 +71,6 @@ callButtons.forEach((btn) => {
       hour12: true,
     });
 
-    // Call History Item বানাও (Card Design)
     const historyItem = document.createElement("div");
     historyItem.className =
       "bg-white shadow-md rounded-lg p-3 mb-3 flex justify-between items-center";
@@ -89,7 +82,7 @@ callButtons.forEach((btn) => {
       <span class="text-sm text-gray-500">${time}</span>
     `;
 
-    callHistoryBox.prepend(historyItem); // হিস্টোরির উপরে যোগ করো
+    callHistoryBox.prepend(historyItem);
 
     alert("📞 Calling National Emergency number: " + callNumber);
   });
