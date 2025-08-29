@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Service</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-</body>
-</html>
+  </head>
+  <body>
+
+    <!-- header section  -->
+    <header class="2xl:flex place-content-between mx-auto max-w-[1800px] main-header mt-6 ">
+
+      <div class=" flex gap-3 justify-center items-center">
+        <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="" />
+        <h3 class="text-[#006747] font-black text-[26px] leading-6">Emergency <br> Service</h3>
+      </div>
+
+      <div class="flex gap-5 sm:mt-8 sm:flex sm:place-content-evenly">
+        <div class="flex gap-2 bg-[#f5fff5] items-center py-[14px] px-[36px] rounded-[50px]">
+            <span>0</span>
+            <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="">
+        </div>
+
+        <div class="flex gap-2 bg-[#f5fff5] items-center py-[14px] px-[36px] rounded-[50px]">
+            <span>100</span>
+            <img class="w-[30px] h-[30px]" src="./assets/coin.png" alt="">
+        </div>
+
+        <div class="flex gap-2 bg-[rgba(0,166,62,1)] items-center py-[14px] px-[36px] rounded-[50px]">
+            <span id="copy" class="text-white font-[600]">0</span>
+            <p class="text-white font-[600]">Copy</p>
+        </div>
+
+      </div>
+
+
+    </header>
+
+
+    <!-- banner section -->
+    <section class=" border-2 mt-[38px] bg-[linear-gradient(90deg,rgba(1,49,35,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)]">
+            <div class=" text-white my-8 ">
+                <img class="w-[92px] h-[92px] 2xl:mx-auto mx-auto" src="./assets/logo-dark.png" alt="">
+               <div class="max-w-[1800px] mx-auto text-center flex flex-col items-center">
+                    <h1 class="mx-auto font-semibold text-[40px] my-[10px]">জরুরি সেবা ডিরেক্টরি</h1>
+                    <p class="mx-auto font-semibold text-[20px]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+               </div>
+            </div>
+    </section>
+
+
+    <main class="bg-[#eaf7eb]">
+            <!-- banner sectio  -->
+    
+
+
+    <!-- Emergency Service Section -->
+     <section id="service-container" class="max-w-[1800px]  mx-auto pt-12 lg:grid lg:grid-cols-12 gap-[30px]      ">
+        <section id="service-box" class=" col-span-9 ">
+            <div class="grid lg:grid-cols-3 gap-[30px] sm:mx-6 ">
+
+                <div class="bg-white p-8 rounded-xl">
+                    <div class="flex place-content-between">
+                        <img class="bg-[#FFE3E2] w-[60px] h-[60px] p-3.5 rounded-[12px] mb-4" src="./assets/emergency.png" alt="">
+                        <span><i class="fa-regular fa-heart text-[24px]"></i></span>
+                    </div>
+                    <h3 id="card-title-1" class="font-bold text-2xl">জাতীয় জরুরি সেবা</h3>
+                    <p class="text-[#5C5C5C]">National Emergency</p>
+                    <p class="  font-bold text-[32px] mb-2"><span id="number1">999</span></p>
+                    <p class="text-[18px] text-[#5C5C5C] bg-[#F2F2F2] inline py-3 px-2 rounded-[50px]" >সার্বজনীন</p>
+                    <div class="flex gap-2 mt-6">
+                        <button id="copy-btn-1" class=" copy-btn-1  btn w-[49%] rounded-[8px] border-none"><i class="fa-solid fa-copy"></i>Copy</button>
+                        <button id="card-btn-1" class="btn bg-[#00A63E] text-white w-[49%] rounded-[8px] border-none"><i class="fa-solid fa-phone"></i>Call</button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl">
+                    <div class="flex place-content-between">
+                        <img class="bg-[#FFE3E2] w-[60px] h-[60px] p-3.5 rounded-[12px] mb-4" src="./assets/police.png" alt="">
+                        <span><i class="fa-regular fa-heart text-[24px]"></i></span>
+                    </div>
+                    <h3 id="card-title-1" class="font-bold text-2xl">পুলিশ</h3>
+                    <p class="text-[#5C5C5C]">Police</p>
+                    <p class="  font-bold text-[32px] mb-2"><span id="number1">999</span></p>
+                    <p class="text-[18px] text-[#5C5C5C] bg-[#F2F2F2] inline py-3 px-2 rounded-[50px]" >পুলিশ</p>
+                    <div class="flex gap-2 mt-6">
+                        <button id="copy-btn-1" class=" copy-btn-1  btn w-[49%] rounded-[8px] border-none"><i class="fa-solid fa-copy"></i>Copy</button>
+                        <button id="card-btn-1" class="btn bg-[#00A63E] text-white w-[49%] rounded-[8px] border-none"><i class="fa-solid fa-phone"></i>Call</button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl">
+                    <div class="flex place-content-between">
+                        <img class="bg-[#FFE3E2] w-[60px] h-[60px] p-3.5 rounded-[12px] mb-4" src="./assets/fire-service.png" alt="">
+                        <span><i class="fa-regular fa-heart text-[24px]"></i></span>
+                    </div>
+                    <h3 id="card-title-1" class="font-bold text-2xl">ফায়ার সার্ভিস</h3>
+                    <p class="text-[#5C5C5C]">Fire Service</p>
+                    <p class="  font-bold text-[32px] mb-2"><span id="number1">999</span></p>
+                    <p class="text-[18px] text-[#5C5C5C] bg-[#F2F2F2] inline py-3 px-2 rounded-[50px]" >ফায়ার</p>
+                    <div class="flex gap-2 mt-6">
+                        <button id="copy-btn-1" class=" copy-btn-1  btn w-[49%] rounded-[8px] border-none"><i class="fa-solid fa-copy"></i>Copy</button>
+                        <button id="card-btn-1" class="btn bg-[#00A63E] text-white w-[49%] rounded-[8px] border-none"><i class="fa-solid fa-phone"></i>Call</button>
+                    </div>
+                </div>
